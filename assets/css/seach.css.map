@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACC,OADM,CACN,GAAG,CAAA,EACF,KAAK,EAAE,IAAI,EACX,MAAM,EAAE,IAAI,GAKZ",
+    "sources": [
+        "../sass/components/seach.scss"
+    ],
+    "names": [],
+    "file": "seach.css"
+}

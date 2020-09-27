@@ -1,0 +1,51 @@
+.search {
+	border-radius: $rounded-3;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+
+	input {
+		background-color: $grey-200;
+		color: $blue-200;
+		font-size: $size-medium;
+		padding: 10px 67px 11px 17px;
+		width: 100%;
+	}
+
+	button {
+		@include flex(center, center);
+		width: 43px;
+		box-shadow: $shadow-2;
+		background: $gradient;
+
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+
+		svg {
+			width: 20px;
+
+			path {
+				fill: $grey-100;
+			}
+		}
+	}
+
+	@include for-size(desktop-up) {
+		position: absolute;
+		top: 20px;
+		right: 10px;
+	}
+
+	@include for-size(phone-only) {
+		width: 50%;
+		input {
+			font-size: $size-small;
+			padding: 8px 50px 8px 10px;
+		}
+		svg {
+			width: 15px !important;
+		}
+	}
+}

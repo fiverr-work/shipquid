@@ -1,0 +1,49 @@
+body > .container {
+	@include flex(space-between, flex-start);
+
+	.sidebar {
+		min-width: 277px;
+		padding: 17px;
+	}
+
+	.main {
+		margin: 0 2%;
+		width: 100%;
+		max-width: 984px;
+		min-width: 650px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.header {
+			width: 100%;
+			margin-bottom: 67px;
+
+			.search{
+				margin-left: auto;
+			}
+		}
+		@include for-size(desktop-up) {
+			.header {
+				margin-bottom: 40px;
+				.title{
+					margin-top: 30px;
+				}
+			}
+			margin-left: 0;
+		}
+	}
+
+	.aside {
+		max-width: 397px;
+		min-width: 360px;
+	}
+
+	@include for-size(desktop-up) {
+		flex-direction: column-reverse;
+		.aside,
+		.main {
+			min-width: 100%;
+		}
+	}
+}

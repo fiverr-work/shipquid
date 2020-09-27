@@ -1,0 +1,59 @@
+body {
+	& > .header {
+		margin-bottom: 27px;
+		padding-left: 17px;
+
+		.label-menu {
+			display: none;
+		}
+		@include for-size(desktop-up) {
+			margin-bottom: 60px;
+			display: inline-flex;
+			top: 10px;
+			position: relative;
+
+			.heading {
+				font-size: $size-regular;
+			}
+			.label-menu {
+				display: inline-block;
+				align-self: flex-end;
+				margin-right: 5px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.bar {
+		height: 296px;
+		width: 52px;
+		border-radius: $rounded-3;
+		background-color: $grey-200;
+		margin-right: 30px;
+		padding: 14px 0;
+		.inner-bar {
+			width: 32px;
+			height: 100%;
+			margin: 0 auto;
+			background: $bar;
+			border-radius: $rounded-3;
+		}
+	}
+
+	.w-50 {
+		display: inline-block !important;
+		width: 49% !important;
+
+		@include for-size(phone-only) {
+			width: 100% !important;
+		}
+	}
+
+	.mb-0{
+		margin-bottom: 0 !important;
+	}
+
+	@include for-size(tablet-portrait-up) {
+		margin: 20px 10px;
+	}
+}

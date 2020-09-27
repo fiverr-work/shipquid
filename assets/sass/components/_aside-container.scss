@@ -1,0 +1,44 @@
+.aside-container {
+	background-color: $grey-200;
+	border-radius: $rounded-4;
+	box-shadow: $shadow-1;
+	margin-top: 30px;
+
+	& > .title {
+		padding: 22px 30px;
+		font-size: $size-larg;
+	}
+	.body {
+		border-radius: $rounded-4;
+		padding: 18px 21px;
+		background-color: $white;
+
+		&.larg-padding {
+			padding: 40px 30px;
+		}
+		.buying-center {
+			@include flex(flex-start, center);
+
+			.list {
+				@include font($segoe-semibold, $size-regular, $blue-200, $weight-medium);
+
+				ul li {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+
+	@include for-size(phone-only) {
+		& > .title {
+			padding: 14px 20px !important;
+			font-size: $size-medium !important;
+		}
+		.body {
+			padding: 20px !important;
+			.list {
+				font-size: $size-small;
+			}
+		}
+	}
+}

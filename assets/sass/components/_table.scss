@@ -1,0 +1,58 @@
+.table-container {
+	background-color: $white;
+	border-radius: $rounded-4;
+	box-shadow: $shadow-1;
+	padding: 50px 26px;
+	overflow-x: auto;
+	z-index: 2;
+
+	.table {
+		margin: 0;
+		width: 100%;
+
+		th,
+		td {
+			border: 0;
+		}
+		thead {
+			@include font($segoe-semibold, $size-regular, $blue-200, $weight-medium);
+			margin-bottom: 5px;
+			text-align: left;
+
+			th:first-child {
+				padding-left: 23px;
+			}
+		}
+		tbody {
+			@include font($segoe-regular, 14px, $grey-600, normal);
+			&:before {
+				content: ".";
+				opacity: 0;
+				line-height: 32px;
+			}
+			tr {
+				td {
+					padding-top: 15px;
+					padding-bottom: 15px;
+				}
+				td:first-child {
+					border-top-left-radius: 5px;
+					border-bottom-left-radius: 5px;
+					padding-left: 23px;
+				}
+				td:last-child {
+					border-bottom-right-radius: 5px;
+					border-top-right-radius: 5px;
+				}
+				&:nth-of-type(odd) {
+					background-color: $grey-100;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+
+	@include for-size(phone-only) {
+		padding: 30px 20px;
+	}
+}

@@ -1,0 +1,23 @@
+.btn-plus {
+	display: inline-block;
+	background: $gradient;
+	box-shadow: $shadow-2;
+	border-radius: $rounded-2;
+	color: $white;
+	font-size: 26px;
+	line-height: 1;
+	font-family: $segoe-semibold;
+	padding: 4px 9.5px 8px;
+	cursor: pointer;
+}
+
+button.btn-plus,
+input[type="submit"],
+input.cancel {
+	transition: transform 200ms ease-out;
+
+	&:hover {
+		transform: translateY(-2px);
+		transition: transform 300ms ease-out;
+	}
+}

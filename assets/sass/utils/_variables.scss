@@ -1,0 +1,68 @@
+// Grey Colors
+$white: #ffffff;
+$grey-100: #f8f8ff;
+$grey-200: #efeffe;
+$grey-300: #c7d6e8;
+$grey-400: #c3c7db;
+$grey-500: #a4acc1;
+$grey-600: #808ba6;
+
+// Blue Colors
+$blue-100: #52638a;
+$blue-200: #0b2358;
+$blue-300: #0a1f4d;
+$blue-400: #081a43;
+
+// Star Colors
+$star-on: #f5e01f;
+$star-off: #d6e0ef;
+
+// Border Radius
+$rounded-0: 0px;
+$rounded-1: 6px;
+$rounded-2: 7px;
+$rounded-3: 9px;
+$rounded-4: 18px;
+
+//Shadows
+$shadow-1: 0px 0px 14px rgba(0, 0, 0, 0.02);
+$shadow-2: 0px 4px 12px rgba(11, 35, 87, 0.23);
+$shadow-3: 0px 4px 12px rgba(11, 35, 87, 0.3);
+$shadow-4: 0px 0px 64px rgba(0, 0, 0, 0.62);
+
+//Font-Sizes
+$size-smaller: 12px;
+$size-small: 16px;
+$size-regular: 18px;
+$size-medium: 20px;
+$size-larg: 22px;
+
+//Font-Weight
+$weight-normal: normal;
+$weight-thin: 100;
+$weight-light: 200;
+$weight-regular: 500;
+$weight-medium: 600;
+$weight-bold: 900;
+
+//Font-Family
+$avenir-bold: "Avenir-Bold", sans-serif;
+$avenir-demi: "Avenir-Demi", sans-serif;
+$avenir-medium: "Avenir-Medium", sans-serif;
+$segoe-bold: "Segoe-Bold", sans-serif;
+$segoe-regular: "Segoe-Regular", sans-serif;
+$segoe-semibold: "Segoe-Semibold", sans-serif;
+
+//Gradient
+$gradient: linear-gradient(180deg, #0b2255 0%, #10357e 100%);
+$bar: linear-gradient(
+	180deg,
+	#115312 1.24%,
+	#0a7d1b 17.1%,
+	#50b04e 29.51%,
+	#d4edd3 47.52%,
+	#fff7ca 63.04%,
+	#fbc8ca 72.29%,
+	#f69095 84.79%,
+	#ef515e 97.9%
+);

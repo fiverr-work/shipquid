@@ -1,0 +1,32 @@
+.main {
+	.header {
+		@include flex(space-between, center);
+	}
+	.icp-container {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
+		place-items: center;
+		grid-gap: 15px;
+
+		&.children {
+			background-color: $white;
+			border-radius: $rounded-4;
+			padding: 32px 34px;
+			grid-gap: 9px;
+			grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+
+			@include for-size(tablet-portrait-up) {
+				padding: 20px 10px;
+			}
+		}
+
+		@include for-size(desktop-up) {
+			position: static;
+		}
+
+		@include for-size(phone-only) {
+			grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)) !important;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+/*=== Import Fonts ===*/
+
+@include font-face("Avenir-Bold", "../fonts/AvenirNextLTPro/AvenirNextLTPro-Bold.otf");
+@include font-face("Avenir-Demi", "../fonts/AvenirNextLTPro/AvenirNextLTPro-Demi.otf");
+@include font-face("Avenir-Medium", "../fonts/AvenirNextLTPro/AvenirNextLTPro-Medium.otf");
+@include font-face("Segoe-Bold", "../fonts/SegoeUI/SegoeUI-Bold.ttf");
+@include font-face("Segoe-Regular", "../fonts/SegoeUI/SegoeUI-Regular.ttf");
+@include font-face("Segoe-Semibold", "../fonts/SegoeUI/SegoeUI-Semibold.ttf");
+
+/*=== Typography Styling ===*/
+
+body {
+	font-family: $segoe-regular;
+	font-style: normal;
+	font-weight: $weight-normal;
+}
+
+.heading {
+	@include font($segoe-semibold, 40px, $blue-200, $weight-medium);
+	text-transform: uppercase;
+}
+
+.title {
+	@include font($segoe-semibold, $size-medium, $blue-200, $weight-medium);
+}
+
+.sub-title,
+.search ::placeholder {
+	@include font($segoe-semibold, $size-small, $grey-600, $weight-medium);
+}
+
+.search ::placeholder {
+	opacity: 0.4;
+}
+
+.card-title {
+	@include font($segoe-regular, $size-small, $grey-100, $weight-normal);
+}
+
+.card-subtitle {
+	@include font($segoe-semibold, 14px, $grey-100, $weight-medium);
+}
+
+.dark {
+	input {
+		@include font($segoe-regular, $size-smaller, $grey-100, $weight-normal);
+		&::placeholder {
+			opacity: 0.3;
+		}
+	}
+	button,
+	ul,
+	label {
+		@include font($segoe-regular, $size-smaller, $grey-100, $weight-normal);
+	}
+}

@@ -1,0 +1,31 @@
+.add-more {
+	background-color: $white;
+	border-radius: $rounded-4;
+	box-shadow: $shadow-1;
+	padding: 21px 22px;
+	margin-bottom: 20px;
+	@include flex(space-between, center);
+
+	.title {
+		margin-bottom: 5px;
+	}
+
+	&.default {
+		margin-bottom: 15px;
+		padding: 15px;
+		background-color: $grey-200 !important;
+	}
+
+	&.child {
+		margin-bottom: 0;
+		padding: 0;
+		border-radius: $rounded-0;
+		box-shadow: none;
+		margin-top: 43px;
+		background: none;
+	}
+
+	@include for-size(phone-only) {
+		min-width: 100%;
+	}
+}

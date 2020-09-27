@@ -1,0 +1,165 @@
+.sidebar {
+	.close-sidebar {
+		display: none;
+		float: right;
+		cursor: pointer;
+	}
+	.container {
+		@include flex(center, center);
+		padding-top: 160px;
+	}
+	.container > ul {
+		width: 100%;
+		li {
+			opacity: 0.7;
+			margin-bottom: 15px;
+			border-radius: $rounded-1;
+			overflow: hidden;
+
+			a {
+				@include flex(flex-start, center);
+				@include font($segoe-semibold, $size-medium, $grey-600, $weight-medium);
+				padding: 13px 25px;
+				width: 100%;
+				text-decoration: none;
+
+				svg {
+					margin-right: 23px;
+					path {
+						stroke: $grey-600;
+					}
+				}
+
+				@include for-size(phone-only) {
+					font-size: $size-small !important;
+				}
+			}
+
+			&.active,
+			&:hover {
+				opacity: 1;
+				a {
+					background-color: $grey-200;
+					color: $blue-200;
+
+					svg path {
+						stroke: $blue-200;
+					}
+				}
+			}
+
+			&:last-child {
+				a {
+					color: $blue-200;
+
+					svg path {
+						stroke: $blue-200;
+					}
+				}
+			}
+		}
+
+		.divider {
+			height: 2px;
+			width: 100%;
+			border-radius: 5px;
+			background-color: $grey-200;
+			margin: 32px auto;
+		}
+
+		.submenu {
+			padding-left: 72px;
+			position: relative;
+			margin-top: 18px;
+
+			&::before {
+				content: "";
+				height: 130%;
+				width: 3px;
+				top: -10px;
+				background-color: $grey-200;
+				position: absolute;
+				left: 36px;
+				border-radius: 50px;
+			}
+
+			li {
+				font-size: $size-regular;
+				position: relative;
+				overflow: visible;
+
+				&::before {
+					content: "";
+					width: 11px;
+					height: 12px;
+					background-color: $grey-200;
+					border-radius: 50px;
+					position: absolute;
+					left: -40px;
+					top: 15px;
+				}
+
+				a {
+					padding: 8px 0;
+					background: none;
+					color: $grey-600;
+				}
+
+				&.active {
+					a{
+						color: $blue-200;
+					}
+
+					&::before {
+						background-color: $blue-200;
+					}
+				}
+			}
+		}
+	}
+
+	@include for-size(desktop-up) {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: -599px;
+		padding-top: 17px;
+		background-color: $grey-100;
+		box-shadow: $shadow-2;
+		transition: left 300ms ease-out;
+		z-index: 9999;
+		overflow-y: auto;
+
+		.container {
+			width: 100%;
+			padding-top: 0;
+		}
+		.close-sidebar {
+			display: block;
+		}
+
+		li {
+			margin-bottom: 8px;
+
+			a {
+				padding: 8px 20px;
+				font-size: $size-smaller !important;
+
+				svg {
+					width: 20px;
+				}
+			}
+		}
+	}
+}
+#checkbox-menu {
+	display: none;
+
+	&:checked + .sidebar {
+		left: 0;
+		@include for-size(phone-only) {
+			right: 0;
+			left: 0;
+		}
+	}
+}
